@@ -60,7 +60,7 @@ else:
         frequency_char.append(HuffmanNode(char, for_coding.count(char)))  # add nodes with char and its frequency
 
     while len(frequency_char) > 1:
-        # sorting by frequency because we will take two elements with the smallest frequencies to combine they
+        # sort by frequency because we will take two elements with the smallest frequencies to combine they
         frequency_char = sorted(frequency_char, key=lambda x: x.frequency)
 
         left = frequency_char[0]
@@ -74,10 +74,10 @@ else:
 
         frequency_char.remove(left)  # delete the smallest nodes
         frequency_char.remove(right)
-        frequency_char.append(new_node)  # adding combined node
+        frequency_char.append(new_node)  # add combined node
 
 
-code_dictionary(frequency_char[0], code_dict)  # filling dictionary with char and its code
+code_dictionary(frequency_char[0], code_dict)  # fill the dictionary with char and its code
 
 amount_of_chars = len(not_repeated_elements)
 amount_of_bites, res_line = count_bites(for_coding, code_dict)
