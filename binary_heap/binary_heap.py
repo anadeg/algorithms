@@ -50,7 +50,7 @@ class MaxHeap:
             # insert 30 --- 10 -> 30 --- bad (heap[0] < heap[1]), index = 1
             # change to 30 -> 10, index = (1 - 1) // 2 = 0
             # then it checks heap[-1] < heap[0]? (and its true, because heap[0] == 30 and heap[-1] == 10)
-            # and change them and properties is violated
+            # and change them and properties are violated
         while index >= 1 and self.heap[(index - 1) // 2] < self.heap[index]:
             self.heap[index], self.heap[(index - 1) // 2] = self.heap[(index - 1) // 2], self.heap[index]
             index = (index - 1) // 2
