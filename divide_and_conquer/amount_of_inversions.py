@@ -1,3 +1,10 @@
+"""
+integer n (1 <= n <=10**5) in the 1st line
+array A[0...n] of integers (<= 10**9) in ascending order  in the 2nd line are given
+Count all pair of indexes 1 <= i < j <= n when A[i] > A[j]
+"""
+
+
 def merge_sort(array, amount_of_inversions):
     current_amount_of_inversions = 0
     if len(array) > 1:
